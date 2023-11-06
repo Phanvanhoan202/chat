@@ -3,7 +3,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-// import NoPage from './pages/NoPage';
+import NoPage from './pages/NoPage';
 import { useContext } from 'react';
 import { AuthContext } from './context/AuthContext';
 
@@ -22,7 +22,7 @@ function App() {
             <Routes>
                 <Route path="/">
                     <Route
-                        index
+                        path="chat"
                         element={
                             <ProtectedRoute>
                                 <Home />
@@ -31,7 +31,7 @@ function App() {
                     />
                     <Route path="register" element={<Register />} />
                     <Route path="login" element={<Login />} />
-                    // <Route path="*" element={<NoPage />} />
+                    <Route path="*" element={<NoPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>
