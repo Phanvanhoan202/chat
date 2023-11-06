@@ -20,7 +20,7 @@ function Login() {
         try {
             // Create user
             await signInWithEmailAndPassword(auth, email, password);
-            navigate('/');
+            navigate('/chat');
         } catch (error) {
             setError(true);
             setLoading(false);
